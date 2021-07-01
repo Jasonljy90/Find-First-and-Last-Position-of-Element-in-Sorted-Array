@@ -17,10 +17,8 @@ func searchRange(nums []int, target int) []int {
 	} else if len(x) == 1 {
 		x = append(x, x[0])
 	}
-	x1 := x[:1]
-	x2 := x[len(x)-1]
-	x3 := append(x1, x2)
-	return x3
+	x1 := append(x[:1], x[len(x)-1])
+	return x1
 }
 
 func main() {
